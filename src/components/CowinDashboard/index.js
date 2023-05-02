@@ -4,6 +4,7 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 
 import VaccinationCoverage from '../VaccinationCoverage'
+import VaccinationByGender from '../VaccinationByGender'
 import VaccinationByAge from '../VaccinationByAge'
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
@@ -95,12 +96,13 @@ class CowinDashboard extends Component {
   )
 
   renderSuccessView = () => {
-    const {CoverageList, byAgeList} = this.state
+    const {CoverageList, byAgeList, byGenderList} = this.state
     console.log(CoverageList)
     return (
       <div className="cowin-dashboard-bg-container">
         {this.renderHeader()}
         <VaccinationCoverage CoverageList={CoverageList} />
+        <VaccinationByGender byGenderList={byGenderList} />
         <VaccinationByAge byAgeList={byAgeList} />
       </div>
     )
