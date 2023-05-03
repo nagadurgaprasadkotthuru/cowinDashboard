@@ -59,7 +59,7 @@ class CowinDashboard extends Component {
   }
 
   renderHeader = () => (
-    <>
+    <div className="header-container">
       <nav className="nav-bar">
         <img
           className="website-logo"
@@ -69,7 +69,7 @@ class CowinDashboard extends Component {
         <h1 className="website-logo-heading">Co-WIN</h1>
       </nav>
       <h1 className="main-heading">CoWIN Vaccination in India</h1>
-    </>
+    </div>
   )
 
   renderLoaderView = () => (
