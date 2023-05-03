@@ -6,7 +6,7 @@ import './index.css'
 const VaccinationByGender = props => {
   const {byGenderList} = props
   return (
-    <>
+    <div className="vaccination-by-age-container">
       <h1 className="heading">Vaccination by gender</h1>
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
@@ -20,19 +20,19 @@ const VaccinationByGender = props => {
             outerRadius="70%"
             dataKey="count"
           >
-            <Cell name={byGenderList[0].gender} fill="#fecba6" />
-            <Cell name={byGenderList[1].gender} fill="#b3d23f" />
-            <Cell name={byGenderList[2].gender} fill="#a44c9e" />
+            <Cell name={byGenderList[0].gender} fill="#f54394" />
+            <Cell name={byGenderList[1].gender} fill="#5a8dee" />
+            <Cell name={byGenderList[2].gender} fill="#2cc6c6" />
           </Pie>
           <Legend
             iconType="circle"
-            layout="vertical"
-            verticalAlign="middle"
-            align="right"
+            layout="horizontal"
+            verticalAlign="bottom"
+            align="center"
           />
         </PieChart>
       </ResponsiveContainer>
-    </>
+    </div>
   )
 }
 
