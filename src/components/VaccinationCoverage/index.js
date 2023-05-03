@@ -14,13 +14,9 @@ const VaccinationCoverage = props => {
   const {CoverageList} = props
 
   return (
-    <>
+    <div className="vaccination-by-age-container">
       <h1 className="heading">Vaccination Coverage</h1>
-      <ResponsiveContainer
-        width={1000}
-        height={300}
-        className="responsive-container"
-      >
+      <ResponsiveContainer width={1000} height={300}>
         <BarChart
           data={CoverageList}
           margin={{
@@ -49,7 +45,7 @@ const VaccinationCoverage = props => {
           <Bar dataKey="dose2" name="Dose 2" fill="#f54394" barSize="5%" />
         </BarChart>
       </ResponsiveContainer>
-    </>
+    </div>
   )
 }
 
